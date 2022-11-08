@@ -19,7 +19,7 @@
  * @returns {string}
  */
 function reverseString(string){
-    return string.split('').revrse().join('');
+    return string.split('').reverse().join('');
 };
 
 /**
@@ -38,3 +38,8 @@ function palindromaController(parola){
 const inputEl = el('input');
 const btnEl = el('button');
 const outputEL = el('h1');
+
+btnEl.addEventListener('click', function(){
+    let input = inputEl.value;
+    outputEL.innerHTML = palindromaController(input);
+});
