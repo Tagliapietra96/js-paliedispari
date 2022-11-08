@@ -41,5 +41,9 @@ const outputEL = el('h1');
 
 btnEl.addEventListener('click', function(){
     let input = inputEl.value;
-    outputEL.innerHTML = palindromaController(input);
+    if(input === '' || !isNaN(parseInt(input))){
+        alert('inserisci una parola');
+    }else{
+        outputEL.innerHTML = palindromaController(input);
+    };
 });
